@@ -42,7 +42,7 @@ class ParseYaml {
             if (line.startsWith("$key:")) {
                 passedKey = true
             } else if (line.contains(Regex("^[\\S]+:")) && passedKey) {
-                passedNextKey = false
+                passedNextKey = true
             } else if (line.contains(Regex("^[- ]{2}")) && passedKey && !passedNextKey) {
                 subcontent.add(line)
             }
