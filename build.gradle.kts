@@ -4,3 +4,16 @@
  * This is a general purpose Gradle build.
  * Learn more about Gradle by exploring our samples at https://docs.gradle.org/6.7.1/samples
  */
+
+plugins {
+    kotlin("jvm") version "1.4.21"
+    antlr
+}
+
+sourceSets.main {
+    java.srcDirs("src/main/")
+}
+
+sourceSets.test {
+    java.srcDirs("src/test/")
+}
